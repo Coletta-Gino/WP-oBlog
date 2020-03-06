@@ -1,0 +1,27 @@
+{
+    "name": "gino/wordpress_custom",
+    "authors": [
+        {
+            "name": "gino",
+            "email": "ginosaure@local.com"
+        }
+    ],
+    "repositories":[
+        {
+            "type":"composer",
+            "url":"https://wpackagist.org"
+        }
+    ],
+    "require": {
+        "johnpbloch/wordpress": "*",
+        "wpackagist-theme/twentytwenty": "*",
+        "wpackagist-plugin/akismet": "*"
+    },
+    "extra" : {
+        "wordpress-install-dir": "wp",
+        "installer-paths": {
+            "content/themes/{$name}": ["type:wordpress-theme"],
+            "content/plugins/{$name}": ["type:wordpress-plugin"]
+        }
+    }
+}
